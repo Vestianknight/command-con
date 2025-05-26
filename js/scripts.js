@@ -193,4 +193,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Hamburger menu toggle (modernized, accessible)
+    const hamburger = document.getElementById('hamburger');
+    const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+    if (hamburger && mobileNavOverlay) {
+        hamburger.addEventListener('click', function() {
+            const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !expanded);
+            mobileNavOverlay.setAttribute('aria-hidden', expanded);
+            document.body.classList.toggle('nav-open', !expanded);
+        });
+        // Close mobile nav when clicking outside nav
+        mobileNavOverlay.addEventListener('click', function(e) {
+            if (e.target === mobileNavOverlay) {
+                hamburger.setAttribute('aria-expanded', false);
+                mobileNavOverlay.setAttribute('aria-hidden', true);
+                document.body.classList.remove('nav-open');
+            }
+        });
+        // Keyboard accessibility: close on Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && document.body.classList.contains('nav-open')) {
+                hamburger.setAttribute('aria-expanded', false);
+                mobileNavOverlay.setAttribute('aria-hidden', true);
+                document.body.classList.remove('nav-open');
+            }
+        });
+    }
+
 });

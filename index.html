@@ -3,19 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a1a1a">
     <title>Command Hub - Warhammer 40k Crusade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <img src="images/Warhammer-logo.png" alt="Warhammer 40k Logo" id="warhammer-logo">
         <h1>Warhammer 40,000 Crusade Tracker</h1>
+        <button id="hamburger" aria-label="Open navigation menu" aria-controls="mobile-nav" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
     </header>
-
-    <nav>
+    <nav id="main-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="schedule.html">Weekly Schedule</a>
     </nav>
+    <div id="mobile-nav-overlay" aria-hidden="true">
+        <nav id="mobile-nav" aria-label="Mobile navigation">
+            <a href="index.html">Home</a>
+            <a href="schedule.html">Weekly Schedule</a>
+        </nav>
+    </div>
 
     <main>
         <section id="crusade-description">
@@ -196,5 +208,23 @@
     </footer>
 
     <script src="js/scripts.js"></script>
+    <script>
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+    hamburger.addEventListener('click', function() {
+        const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+        hamburger.setAttribute('aria-expanded', !expanded);
+        mobileNavOverlay.setAttribute('aria-hidden', expanded);
+        document.body.classList.toggle('nav-open', !expanded);
+    });
+    mobileNavOverlay.addEventListener('click', function(e) {
+        if (e.target === mobileNavOverlay) {
+            hamburger.setAttribute('aria-expanded', false);
+            mobileNavOverlay.setAttribute('aria-hidden', true);
+            document.body.classList.remove('nav-open');
+        }
+    });
+    </script>
 </body>
 </html>
