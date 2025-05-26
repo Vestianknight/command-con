@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command Hub - Warhammer 40k Crusade</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="images/Warhammer-logo.png" alt="Warhammer 40k Logo" id="warhammer-logo">
+        <h1>Warhammer 40,000 Crusade Tracker</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="schedule.html">Weekly Schedule</a>
+    </nav>
+
+    <main>
+        <section id="crusade-description">
+            <h2>The Eternal War Rages On</h2>
+            <p>In the grim darkness of the far future, there is only war. Our forces clash across the galaxy in a desperate struggle for survival and dominance. This is the record of our glorious (and sometimes tragic) crusade.</p>
+        </section>
+
+        <section id="crusade-progress">
+            <h2>Crusade Progress</h2>
+            <p>Overall progress of the factions in the current campaign. (Excel graph placeholder)</p>
+            <div class="graph-placeholder">
+                <img src="images/crusade_progress_placeholder.png" alt="Crusade Progress Graph Placeholder" style="width:100%; max-width:800px;">
+            </div>
+            <p><strong>Faction Contributions (Placeholder Data):</strong></p>
+            <ul>
+                <li><strong>Imperium:</strong> 1500 Points
+                    <ul>
+                        <li>Dark Angels: 450 Points</li>
+                        <li>Adeptus Custodes: 350 Points</li>
+                        <li>Ultra Marines: 400 Points</li>
+                        <li>Adeptus Custodes Silver: 300 Points</li>
+                    </ul>
+                </li>
+                <li><strong>Xenos:</strong> 1200 Points
+                    <ul>
+                        <li>Tyranids: 500 Points</li>
+                        <li>Aeldari: 350 Points</li>
+                        <li>Tau: 350 Points</li>
+                    </ul>
+                </li>
+                <li><strong>Chaos:</strong> 1350 Points
+                    <ul>
+                        <li>Thousand Sons: 600 Points</li>
+                        <li>Death Guard: 750 Points</li>
+                    </ul>
+                </li>
+                 <li><strong>Other:</strong> 250 Points
+                    <ul>
+                        <li>Adeptus Mechanicus: 250 Points</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="army-scores">
+            <h2>Army Overview & Scores</h2>
+            <div class="army-grid">
+                <div class="army-card">
+                    <h3>Dark Angels</h3>
+                    <p>Crusade Points: 120</p>
+                    <p>Battles Won: 8</p>
+                    <p>Requisition Points: 5</p>
+                    <button class="button view-details-btn" data-army="dark_angels">View Details</button>
+                </div>
+                <div class="army-card">
+                    <h3>Adeptus Custodes</h3>
+                    <p>Crusade Points: 95</p>
+                    <p>Battles Won: 6</p>
+                    <p>Requisition Points: 3</p>
+                    <button class="button view-details-btn" data-army="adeptus_custodes">View Details</button>
+                </div>
+                <div class="army-card">
+                    <h3>Tyranids</h3>
+                    <p>Crusade Points: 150</p>
+                    <p>Battles Won: 10</p>
+                    <p>Requisition Points: 7</p>
+                    <button class="button view-details-btn" data-army="tyranids">View Details</button>
+                </div>
+                <div class="army-card">
+                    <h3>Adeptus Mechanicus</h3>
+                    <p>Crusade Points: 70</p>
+                    <p>Battles Won: 4</p>
+                    <p>Requisition Points: 2</p>
+                    <button class="button view-details-btn" data-army="adeptus_mechanicus">View Details</button>
+                </div>
+                <div class="army-card">
+                    <h3>Aeldari</h3>
+                    <p>Crusade Points: 88</p>
+                    <p>Battles Won: 5</p>
+                    <p>Requisition Points: 4</p>
+                    <button class="button view-details-btn" data-army="aeldari">View Details</button>
+                </div>
+                <div class="army-card">
+                    <h3>Tau</h3>
+                    <p>Crusade Points: 110</p>
+                    <p>Battles Won: 7</p>
+                    <p>Requisition Points: 6</p>
+                    <button class="button view-details-btn" data-army="tau">View Details</button>
+                </div>
+                <div class="army-card">
+                    <h3>Thousand Sons</h3>
+                    <p>Crusade Points: 135</p>
+                    <p>Battles Won: 9</p>
+                    <p>Requisition Points: 5</p>
+                    <button class="button view-details-btn" data-army="thousand_sons">View Details</button>
+                </div>
+                <div class="army-card">
+                    <h3>Ultra Marines</h3>
+                    <p>Crusade Points: 100</p>
+                    <p>Battles Won: 7</p>
+                    <p>Requisition Points: 4</p>
+                    <button class="button view-details-btn" data-army="ultra_marines">View Details</button>
+                </div>
+                <div class="army-card">
+                    <h3>Death Guard</h3>
+                    <p>Crusade Points: 145</p>
+                    <p>Battles Won: 9</p>
+                    <p>Requisition Points: 6</p>
+                    <button class="button view-details-btn" data-army="death_guard">View Details</button>
+                </div>
+                <div class="army-card">
+                    <h3>Adeptus Custodes Silver</h3>
+                    <p>Crusade Points: 80</p>
+                    <p>Battles Won: 5</p>
+                    <p>Requisition Points: 3</p>
+                    <button class="button view-details-btn" data-army="adeptus_custodes_silver">View Details</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="planetary-control">
+            <h2>Planetary Control</h2>
+            <div class="planets-grid">
+                <div class="planet-card">
+                    <img src="images/planet1.png" alt="Planet Ignis Prime">
+                    <h3>Planet Ignis Prime</h3>
+                    <ul>
+                        <li>Dark Angels: 65% Control</li>
+                        <li>Tyranids: 20% Presence</li>
+                        <li>Thousand Sons: 15% Corruption</li>
+                    </ul>
+                </div>
+                <div class="planet-card">
+                    <img src="images/planet2.png" alt="Planet Ferrus Secundus">
+                    <h3>Planet Ferrus Secundus</h3>
+                    <ul>
+                        <li>Adeptus Mechanicus: 70% Fortification</li>
+                        <li>Ultra Marines: 25% Garrison</li>
+                        <li>Death Guard: 5% Infestation</li>
+                    </ul>
+                </div>
+                <div class="planet-card">
+                    <img src="images/planet3.png" alt="Planet Xylos">
+                    <h3>Planet Xylos</h3>
+                    <ul>
+                        <li>Aeldari: 50% Watchfulness</li>
+                        <li>Tau: 30% Expansion</li>
+                        <li>Adeptus Custodes: 20% Expedition</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="armyDetailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modalArmyName">Army Name</h2>
+            <div id="modalArmyDetails">
+                <p><strong>Player:</strong> <span id="modalPlayerName">N/A</span></p>
+                <p><strong>Crusade Points:</strong> <span id="modalCrusadePoints">0</span></p>
+                <p><strong>Battles Played:</strong> <span id="modalBattlesPlayed">0</span></p>
+                <p><strong>Battles Won:</strong> <span id="modalBattlesWon">0</span></p>
+                <p><strong>Requisition Points:</strong> <span id="modalRP">0</span></p>
+                <p><strong>Supply Limit:</strong> <span id="modalSupplyLimit">0 PL</span></p>
+                <p><strong>Description/Lore:</strong></p>
+                <p id="modalDescription">No description available.</p>
+                <p><strong>Notable Units:</strong></p>
+                <ul id="modalUnits">
+                    <li>None listed</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Your Crusade Group. For the Emperor!</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
